@@ -171,6 +171,13 @@ button:hover {
     .top-half {
         background: #01ab45;
     }
+    .three-header p {
+        max-width: 331px;
+        margin: 0 auto;
+    }
+    .headline-container h3 {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 775px) {
