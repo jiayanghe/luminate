@@ -253,6 +253,22 @@
             </div>
         </div>
         <div class="row footer-wait">
+            <!-- the following (that will not work here) is an example of the url that mailchip is expecting:-->
+            <!--if (!this.emailIsBlank) {-->
+            <!--// test to see if it has a valid-ish email address - if so, send subscription request-->
+            <!--if ( /(.+)@(.+){2,}\.(.+){2,}/.test(email) ) {-->
+            <!--const url = '//space.us15.list-manage.com/subscribe/post-json?u=68964df4c1a2b792870f33c36&amp;id=05f1fb1756&subscribe=Subscribe&EMAIL=' + email + '&c=JSONP_CALLBACK';-->
+            <!--this.jsonp.request(url, { method: 'Get' })-->
+            <!--.subscribe((res) => {-->
+            <!--this.subscribed = true;-->
+            <!--console.log(res);-->
+            <!--});-->
+            <!--} else {-->
+            <!--// raise alert-->
+            <!--this.invalidEmail = true;-->
+            <!--}-->
+
+            <!--}-->
             <div class="col-md-12">
                 <input id="email-bottom" class="text-center" type="text" placeholder="Enter your email address">
                 <br><br>
