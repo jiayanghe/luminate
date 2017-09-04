@@ -11,6 +11,53 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!--Include jQuery from Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+      function submitEmail(email) {
+        if (email && /(.+)@(.+){2,}\.(.+){2,}/.test(email)) {
+          //  const dc = 'us16';
+          //  const u = '7642dd38948b0317123a1a468' //Take these from their example form
+          //  const id = '39f5a0b8f5'
+
+            const u = '68964df4c1a2b792870f33c36'
+            const id = '05f1fb1756'
+            const dc = 'us15'
+
+            const url = "https://twitter." + dc + ".list-manage.com/subscribe/post-json?u=" + u + '&amp;id=' + id + '&subscribe=Subscribe&EMAIL=' + email + '&c=';
+            //Send E-mail
+            $.ajax({
+              type: "GET",
+              url: url,
+              dataType: 'jsonp',
+              success: function(msg) {
+                if (msg.status === 'pending') {
+                  alert('success!');
+                } else {
+                  alert('fail');
+                }
+              }
+            });
+        } else {
+          alert("Invalid email");
+        }
+      }
+      //Once the page has loaded
+      $(document).ready(function(){
+
+          //Handles bottom submit click
+          $("#submit-bottom").click(function(){
+              submitEmail($("#email-bottom").val())
+          });
+
+          //Handles top submit click
+          $("#submit-top").click(function(){
+              submitEmail($("#email-top").val())
+          });
+      });
+    </script>
 </head>
 <body>
 
@@ -106,7 +153,7 @@
             <div class="col-md-12">
                 <input id="email-top" class="text-center" type="text" placeholder="Enter your email address">
                 <br><br>
-                <button type="submit" class="btn">Get Early Access</button>
+                <button id="submit-top" type="submit" class="btn">Get Early Access</button>
             </div>
         </div>
     </div><!-- bottom half-->
@@ -253,26 +300,11 @@
             </div>
         </div>
         <div class="row footer-wait">
-            <!-- the following (that will not work here) is an example of the url that mailchip is expecting:-->
-            <!--if (!this.emailIsBlank) {-->
-            <!--// test to see if it has a valid-ish email address - if so, send subscription request-->
-            <!--if ( /(.+)@(.+){2,}\.(.+){2,}/.test(email) ) {-->
-            <!--const url = '//space.us15.list-manage.com/subscribe/post-json?u=68964df4c1a2b792870f33c36&amp;id=05f1fb1756&subscribe=Subscribe&EMAIL=' + email + '&c=JSONP_CALLBACK';-->
-            <!--this.jsonp.request(url, { method: 'Get' })-->
-            <!--.subscribe((res) => {-->
-            <!--this.subscribed = true;-->
-            <!--console.log(res);-->
-            <!--});-->
-            <!--} else {-->
-            <!--// raise alert-->
-            <!--this.invalidEmail = true;-->
-            <!--}-->
 
-            <!--}-->
             <div class="col-md-12">
                 <input id="email-bottom" class="text-center" type="text" placeholder="Enter your email address">
                 <br><br>
-                <button type="submit" class="btn">Get Early Access</button>
+                <button id="submit-bottom" type="submit" class="btn">Get Early Access</button>
             </div>
             <div class="col-md-12 email-luminate">
                 <a href="mailto:hello@luminate.space"><p>hello@luminate.space</p></a>
