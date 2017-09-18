@@ -8,82 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="./assets/js/g-analytics.js" async></script>
-    <!--Include jQuery from Google CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
-
-
-
-    <script>
-      function submitEmail(email) {
-        if (email && /(.+)@(.+){2,}\.(.+){2,}/.test(email)) {
-          //  const dc = 'us16';
-          //  const u = '7642dd38948b0317123a1a468' //Take these from their example form
-          //  const id = '39f5a0b8f5'
-
-            const u = '68964df4c1a2b792870f33c36'
-            const id = '05f1fb1756'
-            const dc = 'us15'
-
-            const url = "https://twitter." + dc + ".list-manage.com/subscribe/post-json?u=" + u + '&amp;id=' + id + '&subscribe=Subscribe&EMAIL=' + email + '&c=';
-            //Send E-mail
-            $.ajax({
-              type: "GET",
-              url: url,
-              dataType: 'jsonp',
-              success: function(msg) {
-                if (msg.status === 'pending') {
-                  alert('success!');
-                } else {
-                  alert('fail');
-                }
-              }
-            });
-        } else {
-          alert("Invalid email");
-        }
-      }
-      //Once the page has loaded
-      $(document).ready(function(){
-
-          //Handles bottom submit click
-          $("#submit-bottom").click(function(){
-              submitEmail($("#email-bottom").val())
-          });
-
-          //Handles top submit click
-          $("#submit-top").click(function(){
-              submitEmail($("#email-top").val())
-          });
-      });
-    </script>
 </head>
 <body>
 
 <div class="container-fluid">
     <!--page is split into two with the top half being the initial viewport height-->
     <div class="top-half">
-
-        <div class="row">
-            <div class="col-md-12 logo-container">
-                <div class="logo text-center">
+        <div>
+            <div class="logo-container">
+                <div class="logo">
                     <img src="./assets/images/logo-luminate-logotype.png" class="luminate-logo" alt="Luminate logo">
                 </div>
             </div>
         </div><!-- logo container -->
 
-        <div class="headline-container text-center">
-            <div class="row">
-                <div class="col-md-12">
+        <div class="headline-container">
+            <div class="center">
+                <div>
                     <h2>
                         Qualitative Data Analysis Software
                     </h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
+            <div class="center">
+                <div>
                     <h3>
                         The first <em>truly</em> cloud-based QDAS, with a social twist!
                     </h3>
@@ -91,21 +40,21 @@
             </div>
         </div>
 
-        <div class="row three-header text-center">
-            <div class="col-md-4">
+        <div class="three-header">
+            <div class="icon1">
                 <img src="./assets/images/image-clouds.png">
                 <h2>Purely Cloud-Based</h2>
                 <p>Access anywhere & anytime - Share with collaborators seamlessly -
                     <strong>No</strong> versions and <strong>nothing</strong> to update - ever
                 </p>
             </div>
-            <div class="col-md-4 logo-mark">
+            <div class="logo-mark icon2">
                 <img src="./assets/images/logo-luminate-logomark.png">
                 <h2>Simple & Intuitive</h2>
                 <p>Designed with <strong>students and ECRs in mind</strong> - Clear step-by-step process - Activity based with all you need on <strong>one</strong> screen!
                 </p>
             </div>
-            <div class="col-md-4">
+            <div class="icon3">
                 <img src="./assets/images/image-research.png">
                 <h2>Powerful</h2>
                 <p>Researcher context-aware assistance - Interactive data visualization - Auto analyses, reporting, <strong>collaboration</strong>, and more!
@@ -113,31 +62,31 @@
             </div>
         </div>
 
-        <div class="row text-center app-shot">
-            <div class="col-md-12">
-                <img src="./assets/images/image-screens.png">
+        <div class="app-shot demo">
+            <div class="center">
+                <img src="./assets/images/image-screens.png" class="demoi">
             </div>
         </div>
 
     </div><!-- top half -->
 
-    <div class="bottom-half text-center">
-        <div class="row bottom-content">
-            <div class="col-md-12">
+    <div class="bottom-half">
+        <div class="bottom-content">
+            <div>
                 <div class="introduction">
                     <p>Introducing Luminate QR - the easiest to use and most helpful Qualitative Data Analysis Software (QDAS) ever created, with the ultimate aim of getting you to the right collaborators.</p>
                 </div>
             </div>
         </div>
 
-        <div class="row footer-wait">
-            <div class="col-md-12">
+        <div class="footer-wait">
+            <div class="center">
                 <h2>Join the Waitlist for Updates</h2>
             </div>
         </div>
 
         <div class="row footer-wait">
-            <div class="col-md-12 email-error">
+            <div class="email-error">
                 <!--<alert *ngIf="noEmailTop" type="danger" dismissible="true" dismissOnTimeout="5000" (onClose)="noEmailTop=false">-->
                     <!--Please include an email to join the waitlist-->
                 <!--</alert>-->
@@ -150,11 +99,11 @@
             </div>
         </div>
 
-        <div class="row footer-wait">
-            <div class="col-md-12">
+        <div class="footer-wait">
+            <div class="center1">
                 <input id="email-top" class="text-center" type="text" placeholder="Enter your email address">
-                <br><br>
-                <button id="submit-top" type="submit" class="btn">Get Early Access</button>
+                <br>
+                <button type="submit" class="btn center1">Get Early Access</button>
             </div>
         </div>
     </div><!-- bottom half-->
@@ -281,14 +230,14 @@
         </div>
     </div>
 
-    <div class="bottom-half text-center">
+    <div class="bottom-half">
         <div class="row footer-wait">
-            <div class="col-md-12">
+            <div class="center">
                 <h2>Join the Waitlist for Updates</h2>
             </div>
         </div>
         <div class="row footer-wait">
-            <div class="col-md-12 email-error">
+            <div class="email-error">
                 <!--<alert *ngIf="noEmailBottom" type="danger" dismissible="true" dismissOnTimeout="5000" (onClose)="noEmailBottom=false">-->
                     <!--Please include an email to join the waitlist-->
                 <!--</alert>-->
@@ -301,13 +250,12 @@
             </div>
         </div>
         <div class="row footer-wait">
-
-            <div class="col-md-12">
+            <div class="center1">
                 <input id="email-bottom" class="text-center" type="text" placeholder="Enter your email address">
                 <br><br>
-                <button id="submit-bottom" type="submit" class="btn">Get Early Access</button>
+                <button type="submit" class="btn">Get Early Access</button>
             </div>
-            <div class="col-md-12 email-luminate">
+            <div class="email-luminate center">
                 <a href="mailto:hello@luminate.space"><p>hello@luminate.space</p></a>
             </div>
         </div>
