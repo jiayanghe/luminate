@@ -108,22 +108,22 @@ button:hover {
     justify-content: space-between;
 }
 
-.icon1, .icon2, .icon3{
+.icon{
     display: flex;
     flex-direction: column;
     margin: auto 1em;
 }
 
-.icon1 p, .icon2 p, .icon3 p{
+.icon p{
     text-align: center;
 }
 
-.icon1 h2 , .icon2 h2, .icon3 h2 {
+.icon h2 {
     display: flex;
     align-self: center;
 }
 
-.icon1 img, .icon2 img, .icon3 img{
+.icon img{
     display: flex;
     align-self: center;
 }
