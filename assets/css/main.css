@@ -112,17 +112,19 @@ button:hover {
 
 .icon {
     display: flex;
-    flex-direction: column;
-    margin: auto 1em;
+    flex-direction: column; 
 }
 
 .icon p {
     text-align: center;
+    margin-top: 0;
+    padding: 0.1em;
 }
 
 .icon h2 {
-    display: flex;
-    align-self: center;
+    text-align: center;
+    margin: 0.6em 0 0.3em 0;
+    font-size: 31px;
 }
 
 .icon img {
@@ -146,6 +148,10 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.test {
+    background-color: blue;
 }
 
 .headline{
@@ -214,7 +220,7 @@ button:hover {
     padding-top: 2em;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1050px) {
     .email-user, .email-luminate, button {
         margin: 0 auto;
     }
