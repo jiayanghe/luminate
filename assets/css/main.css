@@ -159,7 +159,8 @@ button:hover {
 }
 
 .headline{
-    height: 4.2em;
+    margin-bottom: -18px;
+    text-align: center;
 }
 
 .logo-container {
@@ -254,7 +255,10 @@ button:hover {
     .three-header{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
+    }
+    .icon-margin{
+        margin-top: 3em;
     }
 }
 
@@ -360,6 +364,10 @@ button:hover {
 .more-about {
     cursor: pointer;
     color: #8DFF5C;
+}
+
+.test {
+    background-color: blue;
 }
 
 
