@@ -148,10 +148,14 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: -1em;
 }
 
-.test {
-    background-color: blue;
+.center3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: -2.2em;
 }
 
 .headline{
@@ -208,6 +212,10 @@ button:hover {
 .email-error {
     width: 100%;
     margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .email-luminate a {
@@ -313,7 +321,7 @@ button:hover {
 
 .introduction {
     width: 65%;
-    padding: 3em 0 2em 0;
+    padding: 3em 0 0.7em 0;
     margin: 0 auto;
 }
 
