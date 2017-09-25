@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="./assets/js/g-analytics.js" async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
@@ -118,15 +119,13 @@
             <div>
                 <p class="biggerP"><strong>Existing QDAS - Unintuitive clunky and frustrating</strong></p>
                 <div>
-                    <a id="hide1">More about the problem &nbsp; &or;</a>
+                    <a id="show1">More about the problem &nbsp; &or;</a>
                 </div>
                 <div id="detail1">
                     <p>During our time as researchers, we noticed that some QDAS are feature-rich but highly unintuitive, often requiring days or weeks just to get started (much less do anything). Others are more intuitive but so clunky and lacking in features that they’re unusable. Many of the researchers that we interviewed said they ended up doing analyses by hand out of sheer frustration with all QDAS!
                     </p>
                     <br>
-                </div>
-                <div>
-                    <span>See Less &nbsp;</span>
+                    <span id="hide1">See Less &nbsp; &and;</span>
                 </div>
             </div>
 
@@ -137,7 +136,7 @@
             <div>
                 <p class="biggerP"><strong>Simple to use QDAS, access anywhere and anytime, ability to collaborate with others and a plethora of powerful tools and features!</strong></p>
                 <div>
-                    <span id="hide2">More about the solution &nbsp;</span>
+                    <span id="show2">More about the solution &nbsp; &or;</span>
                 </div>
 
                 <div id="detail2">
@@ -159,12 +158,9 @@
                     <p>Our application has a clear step-by-step process of project creation, uploading of media & descriptor creation, coding, analyses and more. Each step also contains everything you need for that process on <strong><em>one</em></strong> screen as a single page application. This keeps students and ECRs on track!
                     </p>
                     <br>
+                    <span id="hide2">See Less &nbsp; &and;</span>
                 </div>
 
-                <div>
-                    <span>See Less &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-up"></span>
-                </div>
             </div>
 
 
@@ -174,11 +170,10 @@
             <div>
                 <p class="biggerP"><strong>Code Suggestions, Data Visualisation, Auto Analysis, Reporting & Finding Collaborators</strong></p>
                 <div>
-                    <span>More about power and features &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                    <span id="show3">More about power and features &nbsp; &or;</span>
                 </div>
 
-                <div>
+                <div id="detail3">
 
                     <p>One of the more interesting requests that came from senior-level students and early career researchers was for the QDAS to have some way to suggest high-level / meta codes based on what had been coded up along with the researcher’s theoretical lens and/or specific methodology. We agreed, and this will actually be a module in itself.
                     </p>
@@ -193,11 +188,7 @@
                     <p>While many have expressed concerns with how we might use data, we are being absolutely upfront and continuously transparent about how we will use your data - <strong>we will use it to get you to the right people, <em>period</em> </strong>. This is our passion and our core belief. Furthermore, many senior academics will tell you that <strong>language</strong> can make or break just about any paper or thesis. Hence, much of our efforts will be matching collaborators based on language, whether it be codes used, the texts themselves or literature based on researcher background/lens.
                     </p>
                     <br>
-                </div>
-
-                <div >
-                    <span>See Less &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <span id="hide3">See Less &nbsp; &and;</span>
                 </div>
             </div>
 
@@ -208,21 +199,18 @@
             <div>
                 <p class="biggerP"><strong>Artificial Intelligence, interview & data collection tools, importing codes from other QDAS, social page features and feature requests made by you!</strong></p>
                 <div>
-                    <span>More about our big plans &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                    <span id="show4">More about our big plans &nbsp; &or;</span>
                 </div>
 
-                <div>
+                <div id="detail4">
                     <p>Apart from providing you with the most helpful and state-of-the-art QDAS on the market, planned features include:</p>
                     <p><strong>Artificial intelligence - </strong>We plan to make full use of current and future natural language processing tools to further fuel researcher context-aware assistance and auto analyses. </p>
                     <p><strong>Interview and data collection tools - </strong>Whether you are an ethnographer, a structured or semi-structured kind of girl or guy, or the type who likes ‘qualitative questionnaires’, we’re planning a plethora of data collection techniques that will pull in your data effortlessly. </p>
                     <p><strong>Importing of codes from other QDAS - </strong>Perhaps we are jumping the gun a little bit, but our aim is to make your life easier.</p>
                     <p><strong>Whatever is the most requested by you - </strong>We will be including a mechanism for easily submitting requests and feedback within the app.</p>
                     <p>And, of course, continuous improvements to the <strong>social page that’ll help you find like-minded collaborators!</strong></p>
-                </div>
-                <div>
-                    <span>See Less &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-up"></span>
+                    <br>
+                    <span id="hide4">See Less &nbsp; &and;</span>
                 </div>
             </div>
         </div>
@@ -262,15 +250,6 @@
 
 </div><!-- container fluid-->
 
-<script>
-$(document).ready(function(){
-    $("#hide1").click(function(){
-        $("#detail1").hide();
-    });
-    $("#hide2").click(function(){
-        $("#detail2").hide();
-    });
-});
-</script>
+
 </body>
 </html>
