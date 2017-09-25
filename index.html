@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="./assets/js/g-analytics.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
@@ -117,17 +118,15 @@
             <div>
                 <p class="biggerP"><strong>Existing QDAS - Unintuitive clunky and frustrating</strong></p>
                 <div>
-                    <span>More about the problem &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                    <a id="hide1">More about the problem &nbsp; &or;</a>
                 </div>
-                <div>
+                <div id="detail1">
                     <p>During our time as researchers, we noticed that some QDAS are feature-rich but highly unintuitive, often requiring days or weeks just to get started (much less do anything). Others are more intuitive but so clunky and lacking in features that they’re unusable. Many of the researchers that we interviewed said they ended up doing analyses by hand out of sheer frustration with all QDAS!
                     </p>
                     <br>
                 </div>
                 <div>
                     <span>See Less &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-up"></span>
                 </div>
             </div>
 
@@ -137,12 +136,11 @@
             </h2>
             <div>
                 <p class="biggerP"><strong>Simple to use QDAS, access anywhere and anytime, ability to collaborate with others and a plethora of powerful tools and features!</strong></p>
-                <div >
-                    <span>More about the solution &nbsp;</span>
-                    <span class="glyphicon glyphicon-chevron-down"></span>
+                <div>
+                    <span id="hide2">More about the solution &nbsp;</span>
                 </div>
 
-                <div >
+                <div id="detail2">
                     <p>After conducting interviews and focus groups with students and early career researchers to find out what was most important to them, we found the following common concerns:
                     </p>
                     <br>
@@ -264,6 +262,15 @@
 
 </div><!-- container fluid-->
 
-
+<script>
+$(document).ready(function(){
+    $("#hide1").click(function(){
+        $("#detail1").hide();
+    });
+    $("#hide2").click(function(){
+        $("#detail2").hide();
+    });
+});
+</script>
 </body>
 </html>
